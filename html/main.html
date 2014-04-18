@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/css_google_map.css">
+
+    <script>
+    //======== Global Variables ========
+    // Button status.
+      var isActive = 0;
+    </script>
+
+    <script type="text/javascript"
+      src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAAclRM4ZElY3V0_94JIzsA4QDEaQvE0eY&sensor=true">
+    </script>
+    <script>
+      function change_active_status(active_path, not_active_path)
+      {
+      	var img = document.getElementById('toolbar-image');
+      	if(isActive == 0)
+      	  img.src = active_path;
+      	else
+      	  img.src = not_active_path;
+      	isActive = !isActive;
+      	alert(isActive);
+      	return false;
+      };
+    </script>
+  </head>
+
+  <body class="LUPOSDATE">
+  	<div class="LUPOSDATE_LAYOUT" id="container" style="width:100%; height:100%;">
+  		<!--Three parts, head-info, customers, map-->
+  		<div class="head-info" id="header" style="backgroud-color:#FFA500; height:10%">
+  			<h1>LUPOSDATE</h1>
+  			<!-- 
+  			<small style="font-size:16pt;">- Get what you want!</small>
+  			-->
+  		</div>
+  		<div class="customers" id="content" style="height:10%">
+  			<!--4 buttons, weather, weather history, traffic, city-->
+  			<div class="button" id="city-btn" onclick="change_active_status('../resource/icon/city_active.png', '../resource/icon/city_not_active.png');">
+  				<div class="button-image-not-activiate" id="city-btn-na">
+  					<img id="toolbar-image" src="../resource/icon/city_not_active.png" align="absmiddle">
+  					&nbsp;Cities
+  				</div>
+  			</div>
+  			<span style="width:5px">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+  			<div class="button" id="weather-btn">
+  				<div class="button-image-not-activiate" id="weather-btn-na">
+  					<img id="toolbar-image" src="../resource/icon/sunny_not_active.png" align="absmiddle">
+  					&nbsp;Weather
+  				</div>
+  			</div>
+  			<span style="width:5px">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+  			<div class="button" id="whistory-btn">
+  				<div class="button-image-not-activiate" id="whistory-btn-na">
+  					<img id="toolbar-image" src="../resource/icon/whistory_not_active.png" align="absmiddle">
+  					&nbsp;Weather History
+  				</div>
+  			</div>
+  			<span style="width:5px">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+  			<div class="button" id="railway-btn">
+  				<div class="button-image-not-activiate" id="railway-btn-na">
+  					<img id="toolbar-image" src="../resource/icon/railway_not_active.png" align="absmiddle">
+  					&nbsp;Deutsche Bahn
+  				</div>
+  			</div>
+  			<span style="width:5px">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+  		</div>
+  		<div class="google-map" id="map-canvas" style="height:80%; width:96%;" >
+  		  <script src="../javascript/google_map.js">
+          </script>
+  		</div>
+  	</div>
+  </body>
+</html>
