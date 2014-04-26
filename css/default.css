@@ -1,0 +1,45 @@
+img
+{
+	height: 30px;
+	width: 30px;
+}
+
+.customers
+{
+	margin: 0 auto;
+	text-align: center
+}
+
+.button,
+.button-image-not-activiate
+{
+	display:inline-block;
+	position: relative;
+}
+
+.button:hover
+{
+	cursor:pointer;
+}
+
+.setting
+{
+	background-color: #d14836;
+	background-image: -moz-linear-gradient(center top, #dd4b39, #d14836);
+	border: 1px solid transparent;
+	color: #fff;
+	border-radius: 2px;
+	height: 30px;
+	min-width: 60px;
+	font-size: 20px;
+	white-space: nowrap;
+}
+
+.setting:hover
+{
+	background-color: #C53727;
+    background-image: -moz-linear-gradient(center top , #DD4B39, #C53727);
+    border: 1px solid #b0281A;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+

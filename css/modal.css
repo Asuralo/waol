@@ -1,0 +1,73 @@
+/*Layer 1,*/
+.LUPOSDATE_LAYOUT
+{
+	position:absolute;
+	z-index: 1;
+	/*-webkit-filter: blur(0px);*/
+}
+
+/*Layer 2,*/
+.modal
+{
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	z-index: 9999999;
+	display: none;
+	/*display: block;*/
+}
+
+.modal-dialog
+{
+	position: relative;
+	width: 400px;
+	position: relative;
+	margin: 0 auto;
+	margin-top: 10%;
+	border: 2px solid;
+	border-radius: 1px;
+	border-color: #d9d9d9;
+	background-color: #ffffff;
+	opacity: 1;
+}
+
+.close
+{
+	background-image: url("../resource/icon/close1.png");
+	background-size: 24px 24px;
+	height: 24px;
+	width: 24px;
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	top: -10px;
+	font-weight: bold;
+	font-size: 16px;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	border: none;
+}
+.close:hover 
+{
+	background-image: url("../resource/icon/close2.png");
+	cursor:pointer;
+}
+
+/*Layer 3,*/
+/*.blur
+{
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	z-index: 10;
+	background-color: #000000;
+	opacity: 0.7;
+	display: none;
+}*/

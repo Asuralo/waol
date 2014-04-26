@@ -13,22 +13,5 @@ body
 	margin-left: 2%;
 }
 
-img
-{
-	height: 30px;
-	width: 30px;
-}
 
-.customers
-{
-	margin: 0 auto;
-	text-align: center
-}
-
-.button,
-.button-image-not-activiate
-{
-	display:inline-block;
-	position: relative;
-}
 

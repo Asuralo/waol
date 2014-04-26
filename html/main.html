@@ -4,29 +4,14 @@
   	<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
     <link rel="stylesheet" href="../css/css_google_map.css">
-
-    <script>
-    //======== Global Variables ========
-    // Button status.
-      var isActive = 0;
-    </script>
+    <link rel="stylesheet" href="../css/default.css">
+    <link rel="stylesheet" href="../css/modal.css">
 
     <script type="text/javascript"
       src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAAclRM4ZElY3V0_94JIzsA4QDEaQvE0eY&sensor=true">
     </script>
-    <script>
-      function change_active_status(active_path, not_active_path)
-      {
-      	var img = document.getElementById('toolbar-image');
-      	if(isActive == 0)
-      	  img.src = active_path;
-      	else
-      	  img.src = not_active_path;
-      	isActive = !isActive;
-      	alert(isActive);
-      	return false;
-      };
-    </script>
+    <script src="../javascript/jquery-1.11.0.min.js"></script>
+    <script src="../javascript/toolbar_activity.js"></script>
   </head>
 
   <body class="LUPOSDATE">
@@ -40,39 +25,69 @@
   		</div>
   		<div class="customers" id="content" style="height:10%">
   			<!--4 buttons, weather, weather history, traffic, city-->
-  			<div class="button" id="city-btn" onclick="change_active_status('../resource/icon/city_active.png', '../resource/icon/city_not_active.png');">
+  			<div class="button" id="city-btn">
   				<div class="button-image-not-activiate" id="city-btn-na">
-  					<img id="toolbar-image" src="../resource/icon/city_not_active.png" align="absmiddle">
+  					<img id="toolbar-image-city" src="../resource/icon/city_not_active.png" align="absmiddle" class="toolbar-image">
   					&nbsp;Cities
   				</div>
   			</div>
   			<span style="width:5px">&nbsp;&nbsp;&nbsp;&nbsp;</span>
   			<div class="button" id="weather-btn">
   				<div class="button-image-not-activiate" id="weather-btn-na">
-  					<img id="toolbar-image" src="../resource/icon/sunny_not_active.png" align="absmiddle">
+  					<img id="toolbar-image-weather" src="../resource/icon/sunny_not_active.png" align="absmiddle" class="toolbar-image">
   					&nbsp;Weather
   				</div>
   			</div>
   			<span style="width:5px">&nbsp;&nbsp;&nbsp;&nbsp;</span>
   			<div class="button" id="whistory-btn">
   				<div class="button-image-not-activiate" id="whistory-btn-na">
-  					<img id="toolbar-image" src="../resource/icon/whistory_not_active.png" align="absmiddle">
+  					<img id="toolbar-image-whistory" src="../resource/icon/whistory_not_active.png" align="absmiddle" class="toolbar-image">
   					&nbsp;Weather History
   				</div>
   			</div>
   			<span style="width:5px">&nbsp;&nbsp;&nbsp;&nbsp;</span>
   			<div class="button" id="railway-btn">
   				<div class="button-image-not-activiate" id="railway-btn-na">
-  					<img id="toolbar-image" src="../resource/icon/railway_not_active.png" align="absmiddle">
+  					<img id="toolbar-image-railway" src="../resource/icon/railway_not_active.png" align="absmiddle" class="toolbar-image">
   					&nbsp;Deutsche Bahn
   				</div>
   			</div>
   			<span style="width:5px">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <!--Setting board: set some arguments of customers.-->
+        <div class="button setting" id="cutomer-setting-btn" style="float:right; margin-right: 2%">
+          <img src="../resource/icon/setting.png" align="absmiddle">Setting</img>
+        </div>
   		</div>
+
+      <!--Google map-->
   		<div class="google-map" id="map-canvas" style="height:80%; width:96%;" >
-  		  <script src="../javascript/google_map.js">
-          </script>
+  		  <script src="../javascript/google_map.js"></script>
   		</div>
   	</div>
+
+    <!--Seting: Modal Dialog-->
+    <div class="modal gauss">
+      <div class="modal-dialog" id="setting-dialog">
+        <div class="modal-content">
+          <!--header, title, body, footer-->
+          <div class="modal-header">
+            <button class="close"></button>
+          </div>
+          <div class="modal-title"> This is a modal.
+          </div>
+          <div class="modal-body"> Body!!!
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-close">Close</button>
+            <button class="btn btn-apply">Apply</button>
+          </div>
+        </div><!--.modal-content-->
+      </div><!--.modal-dialog-->
+    </div><!--.modal-->
+
+    <!--Blur Layer: not Gaussian Blur-->
+    <!--!!!Deprecated!!!, using -webkit-filter:blur(10px);-->
+<!--     <div class="blur">
+    </div> -->
   </body>
 </html>
