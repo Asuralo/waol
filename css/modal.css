@@ -57,6 +57,33 @@
 	cursor:pointer;
 }
 
+.modal-footer
+{
+	display: block;
+	text-align: right;
+}
+
+.btn
+{
+	border: none;
+	font-size: 16px;
+	font-weight: bold;
+	color: #ffffff;
+}
+
+.btn-close:hover
+{
+	cursor: pointer;
+	background: #de1c22;
+}
+
+.btn-submit:hover,
+.btn-apply:hover
+{
+	cursor: pointer;
+	background: #37ad3f;
+}
+
 /*Layer 3,*/
 /*.blur
 {
